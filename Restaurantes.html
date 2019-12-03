@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>OnMenú - Restaurantes</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <!--Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="Css/Style.css" />
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+
+<body style="background-color: white">
+    <!--NAVIGATION-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand ml-auto" href="Index.html"> <img src="img/logoNav.png"
+                    style="width: 80px; height: 25px; "> <span style="color: #edc355;"> OnMenú</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="Restaurantes.html">Restaurantes</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Index.html">Sobre Nosotros</a>
+                    </li>
+                </ul>
+                &ThickSpace;&ThickSpace;&ThickSpace;
+                <input type="text" class="form-control col-md-2" style="height: 20px;">
+
+                <input class="btn btn-link" type="button" style="color: #edc355;" value="Buscar">
+
+                <form class="form-inline my-2 my-lg-0 mx-5">
+                    <a class="btn btn-outline-warning my-2 my-sm-0 mx-2" href="Login.html"><i
+                            class="fas fa-sign-in-alt"></i></button>
+                        <a class="btn btn-outline-success my-2 my-sm-0" href="SignUp.html"><i
+                                class="fas fa-user-plus"></i></a>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+
+    <!--HEADER-->
+    <header id="list-phones">
+        <div class="container mt-5">
+            <div class="row mb-3">
+                <div class="col-md-2"></div>
+                <div class="col-md-6 text-center">
+                    <h2><label for="marca">Menú por restaurante</label></h2>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <!--<input type="text" class="form-control control-inline" placeholder="Filter">-->
+
+                        <select id="marca" class="form-control" onchange="filtro()">
+                            <option selected="selected" value="Todos">Elige tu restaurante favorito</option>
+                            <option value="Motorola">Vulcano Grill</option>
+                            <option value="Iphone">KJartura RD</option>
+                            <option value="Xiaomi">El Corrido</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="Iphone">Kjartura RD</h4>
+                </div>
+            </div>
+
+            <div class="row mb-2">
+
+                <div class="col-md-4 Iphone " id="phone">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/carne.jpg" class="card-img-top" alt="...">
+                        <div class="card-body bg-dark" style="color: white">
+                            <h5 class="card-title card-text text-center"><strong>Carnunguesa</strong></h5>
+                            <h5 class="text-center Rd">RD$ 450</h5>
+                            <div class="text-center">
+                                <a href="Detalles.Html" class="btn btn-outline-warning" data-toggle="modal"
+                                    data-target="#exampleModal">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 Iphone " id="phone">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/jartura.jpg" class="card-img-top" alt="...">
+                        <div class="card-body bg-dark" style="color: white">
+                            <h5 class="card-title card-text text-center"><strong>Hamburguesa Completa</strong></h5>
+                            <h5 class="text-center Rd">RD$ 400</h5>
+                            <div class="text-center">
+                                <a href="Detalles.Html" class="btn btn-outline-warning" data-toggle="modal"
+                                    data-target="#exampleModal">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 Iphone " id="phone">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/chiken.jpg" class="card-img-top" alt="...">
+                        <div class="card-body bg-dark" style="color: white">
+                            <h5 class="card-title card-text text-center"><strong>Chicken Burger</strong></h5>
+                            <h5 class="text-center Rd">RD$ 300</h5>
+                            <div class="text-center">
+                                <a href="Detalles.Html" class="btn btn-outline-warning " data-toggle="modal"
+                                    data-target="#exampleModal">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <h4 class="Xiaomi">El Corrido</h4> 
+            <div class="row mb-2">
+                <div class="col-md-4 Xiaomi" id="phone">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/elcorrido1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body bg-dark" style="color: white">
+                            <h5 class="card-title card-text text-center"><strong>Tacos</strong></h5>
+                            <h5 class="text-center Rd">RD$ 175</h5>
+                            <div class="text-center">
+
+                                <a href="Detalles.Html" class="btn btn-outline-warning " data-toggle="modal"
+                                    data-target="#exampleModal">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 Xiaomi " id="phone">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/corrrido.jpg" class="card-img-top" alt="...">
+                        <div class="card-body bg-dark" style="color: white">
+                            <h5 class="card-title card-text text-center"><strong>Nachos Gourmet</strong></h5>
+                            <h5 class="text-center Rd">RD$ 150</h5>
+                            <div class="text-center">
+                                <a href="Detalles.Html" class="btn btn-outline-warning " data-toggle="modal"
+                                    data-target="#exampleModal">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 Xiaomi " id="phone">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/elcorrido2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body bg-dark" style="color: white">
+                            <h5 class="card-title card-text text-center"><strong>Tacos duros</strong></h5>
+                            <h5 class="text-center Rd">RD$ 150</h5>
+                            <div class="text-center">
+                                <a href="Detalles.Html" class="btn btn-outline-warning " data-toggle="modal"
+                                    data-target="#exampleModal">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="Motorola">Vulcano Grill</h4> 
+            <div class="row mb-2">
+                <!--Primer Card-->
+                <div class="col-md-4 Motorola " id="phone">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/vulcano1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body bg-dark" style="color: white">
+                            <h5 class="card-title card-text text-center"><strong>Pechuga a la plancha</strong></h5>
+                            <h5 class="text-center Rd">RD$ 250</h5>
+                            <div class="text-center">
+
+                                <a href="Detalles.Html" class="btn btn-outline-warning " data-toggle="modal"
+                                    data-target="#exampleModal">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Espaciado entre columns-->
+                <div class="col-md-4 Motorola " id="phone">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/vulcano2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body bg-dark" style="color: white">
+                            <h5 class="card-title card-text text-center"><strong>Monfongo</strong></h5>
+                            <h5 class="text-center Rd">RD$ 300</h5>
+                            <div class="text-center">
+
+                                <a href="Detalles.Html" class="btn btn-outline-warning " data-toggle="modal"
+                                    data-target="#exampleModal">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 Motorola " id="phone">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/vulcanord2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body bg-dark" style="color: white">
+                            <h5 class="card-title card-tex text-center"><strong>Ensalada de pollo</strong></h5>
+                            <h5 class="text-center Rd"><strong>RD$ 200</strong></h5>
+                            <div class="text-center">
+
+                                <a href="Detalles.Html" class="btn btn-outline-warning " data-toggle="modal"
+                                    data-target="#exampleModal">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <!--Espacio hacia Abajo-->
+    <footer class="">
+    <br>
+     </div>
+        <div class="container  text-center text-md-left">
+            <div class="row ">
+                <div class="col-md-3 col-lg-4 col-xl-3 mb-r">
+                    <h6 class="title font-bold" style="color: #edc355;">
+                        <strong>OnMenú</strong>
+                    </h6>
+                    <p>¿Que esperas? Regístrate Ya!</p>
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mb-r">
+                    <h6 class="title font-bold" style="color: #edc355;">
+                        <strong>Contactos</strong>
+                    </h6>
+                    <p><i class="fas fa-home"></i> Av. Carlos Perez Ricard No. 5, Altos de Arroyo Hondo, Santo Domingo,
+                        Rep. Dominicana </p>
+                    <p><i class="fas fa-envelope-square"></i> OnMenuOficial@gmail.com </p>
+                    <p><i class="fas fa-phone-square"></i> Tel.: 829-273-1030</p>
+
+
+                    <span class="mb-0 white-text">Redes: <span></span>
+                        <a class="icons-sm fb-ic ml-0"><i class="fab fa-facebook text-white"></i></a>
+                        <a href="" class="icons-sm tw-ic"><i class="fab fa-twitter-square text-white"></i></a>
+                        <a href="" class="icons-sm gplus-ic"><i class="fab fa-google text-white"></i></a>
+                        <a href="" class="icons-sm li-ic"><i class="fab fa-linkedin text-white"></i></a>
+                        <a href="" class="icons-sm ins-ic"><i class="fab fa-instagram text-white"></i></a>
+
+                </div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mb-r">
+                    <h6 class="title font-bold" style="color: #edc355;">
+                        <strong>Ayuda</strong>
+                    </h6>
+                    <p><a href="#" class="">Tu Cuenta</a></p>
+
+
+                    <p><a href="#" class="">Ayuda</a></p>
+                </div>
+
+                <div class="footer-copuright">
+                    <div class="container-fluid" style="color: #edc355;">
+                        © 2019 Copyright
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header  bg-dark">
+                    <h5 class="modal-title" id="exampleModalLabel" style="color: #edc355;"> <strong>Conoce tu comida
+                            favorita</strong></h5>
+                    <button type="button" class="close" style="color: #edc355" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Estamos trabajando en esta sección para darte a conocer tus platos favoritos al más mínimo detalle
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="Js/Carrito.js"></script>
+    <script src="Js/Hide.js"></script>
+</body>
+
+</html>
